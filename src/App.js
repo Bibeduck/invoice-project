@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { GoogleSpreadsheet } from "google-spreadsheet";
+import { Button } from 'antd';
 // import keys from "../keys.json";
 
 const REACT_APP_SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
@@ -22,6 +23,7 @@ function App() {
       await doc.loadInfo();
 
       const sheet = doc.sheetsByIndex[1];
+      sheet.getRows({limit: 3}).then(data => console.log(data));
       console.log(sheet.title);
 
     } catch (error) {
@@ -40,6 +42,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Button type="primary">Test</Button>
         <a
           className="App-link"
           href="https://reactjs.org"
