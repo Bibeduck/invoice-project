@@ -10,7 +10,7 @@ const routes = [
         authMode: "private",
         exact: true,
         component: Loadable({
-            loader: () => import("./containers/Home/Home"),
+            loader: () => import("./containers/Home"),
             loading: () => <div>Loading...</div>,
         }),
     },
@@ -21,7 +21,7 @@ const routes = [
         authMode: "private",
         exact: true,
         component: Loadable({
-            loader: () => import("./containers/Account/Account"),
+            loader: () => import("./containers/Account"),
             loading: () => <div>Loading...</div>,
         }),
     },

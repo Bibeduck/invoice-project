@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { BrowserRouter, Switch } from "react-router-dom";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 
-import Auth from "./containers/Auth/Auth";
-import Layout from "./containers/Layout/Layout";
+import Auth from "./containers/Auth";
+import Layout from "./containers/Layout";
 import PublicRoute from "./components/PublicRoute";
 import PrivateRoute from "./components/PrivateRoute";
 
