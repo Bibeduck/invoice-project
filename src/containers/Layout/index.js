@@ -9,8 +9,8 @@ import {
     UploadOutlined,
 } from "@ant-design/icons";
 import "./layout.css";
-import routes from '../../routes';
-import Routes from '../../components/Routes';
+import routes from "../../routes";
+import Routes from "../../components/Routes";
 
 export default function MaintLayout() {
     const [collapsed, setCollapsed] = useState(false);
