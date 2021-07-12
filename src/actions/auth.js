@@ -13,5 +13,7 @@ export const signin = (formData, history) => (dispatch) => {
             dispatch({ type: AUTH, isLogin: false, authMessage: "No such account." });
         }
         console.log(history, 'history');
-        history.go('/');
+        history.go('/main');
+        console.log(history, 'history');
+
 }

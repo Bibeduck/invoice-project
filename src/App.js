@@ -1,48 +1,55 @@
 import { useEffect } from "react";
-import logo from "./logo.svg";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch } from "react-router-dom";
 import { GoogleSpreadsheet } from "google-spreadsheet";
-import { Button } from 'antd';
 
-import { routes } from './routes';
-import Layout from './containers/Layout/Layout';
-// import keys from "../keys.json";
+import Auth from "./containers/Auth/Auth";
+import Layout from "./containers/Layout/Layout";
+import PublicRoute from "./components/PublicRoute";
+import PrivateRoute from "./components/PrivateRoute";
 
 const REACT_APP_SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
 const REACT_APP_CLIENT_EMAIL = process.env.REACT_APP_CLIENT_EMAIL;
 const REACT_APP_PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
 
 function App() {
+    const doc = new GoogleSpreadsheet(REACT_APP_SPREADSHEET_ID);
 
-  const doc = new GoogleSpreadsheet(REACT_APP_SPREADSHEET_ID);
+    const googlesheetConnect = async () => {
+        try {
+            await doc.useServiceAccountAuth({
+                client_email: REACT_APP_CLIENT_EMAIL,
+                private_key: REACT_APP_PRIVATE_KEY,
+            });
 
-  const googlesheetConnect = async () => {
-    try {
-      await doc.useServiceAccountAuth({
-        client_email: REACT_APP_CLIENT_EMAIL,
-        private_key: REACT_APP_PRIVATE_KEY,
-      });
+            await doc.loadInfo();
 
-      await doc.loadInfo();
+            const sheet = doc.sheetsByIndex[1];
+            sheet.getRows({ limit: 3 }).then((data) => console.log(data));
+            console.log(sheet.title);
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
-      const sheet = doc.sheetsByIndex[1];
-      sheet.getRows({limit: 3}).then(data => console.log(data));
-      console.log(sheet.title);
+    useEffect(() => {
+        // googlesheetConnect();
+    }, []);
 
-    } catch (error) {
-      console.error(error);
-    }
-  }
+    const isLogin = localStorage.getItem("isLogin") === "true" ? true : false;
 
-  useEffect(() => {
-    googlesheetConnect();
-  }, [])
-
-  return (
-    <BrowserRouter>
-      {routes(localStorage.getItem('isLogin'))}
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Switch>
+                <PublicRoute component={Auth} path="/auth" isUnlock={isLogin} />
+                <PrivateRoute
+                    path="/"
+                    isUnlock={isLogin}
+                    redirectTo="/auth"
+                    component={Layout}
+                />
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;

@@ -1,24 +1,30 @@
-import { Switch, Route, Redirect } from 'react-router-dom';
+import React from "react";
+import Loadable from "react-loadable";
 
-import Layout from './containers/Layout/Layout';
-import Auth from './containers/Auth/Auth';
+// put your routes inside this array.
+const routes = [
+    {
+        name: "Home",
+        path: "/home",
+        restricted: true,
+        authMode: "private",
+        exact: true,
+        component: Loadable({
+            loader: () => import("./containers/Home/Home"),
+            loading: () => <div>Loading...</div>,
+        }),
+    },
+    {
+        name: "Account",
+        path: "/account",
+        restricted: true,
+        authMode: "private",
+        exact: true,
+        component: Loadable({
+            loader: () => import("./containers/Account/Account"),
+            loading: () => <div>Loading...</div>,
+        }),
+    },
+];
 
-
-export const routes = (user) => {
-    console.log(user);
-    if(user !== 'true') {
-        return (
-            <Switch>
-                <Route exact path='/auth' component={Auth} />
-                {/* <Redirect from='*' to='/auth' /> */}
-            </Switch>
-        )
-    }
-
-    return (
-        <Switch>
-            <Route exact path='/' component={Layout} />
-            {/* <Redirect from='*' to='/' /> */}
-        </Switch>
-    )
-}
+export default routes;
