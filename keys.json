@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "invoice-project-319506",
+  "private_key_id": "47694a19b60ba538c075c4c9541d4a76a07332ca",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCaAlM3BbK0Kk9S\nPT5rYl1vN0AbAe4YGVebAfZ2lkNx2yUeS45FiTtuR1KwU29hEDB7JcLFtCSKBXKf\nz72ZMGOcfIFgqug2raMegS31skOIZXTy7yqDHrt8lYuJfpPcZQlxDm8leftAViqr\n+fbu8a8H6ZRZoxrYIBcq3Ms1zBDQN3xrxI6vvWT1yBeLCxC479uNTH8QxcPFwl0c\ngQDi5dzcU6GsItVT7OEpt5HICtNjjazeeovFp2+vilfMbXCUkNtflLrCe/H8i921\nVVl1sbEuM9wulKfZZGE0b2Nl7myNCSZDZB4SzwEM/sdqtFsDX6m/+b1MV+A18JcK\nSDsM+HQPAgMBAAECggEAAY5aH+QHWQmqZoF8PXfaINMKlfCa4r8deFFN7QckpE8G\nB3x/nKqVIU6dgm7oC6+EWzeCSclsVcFWAKZdMIyMHRsm8ClEkl+Ga+Wl52XHMpFv\n2+Utup3CCtwJ87gwhJlivd6FoffNtundTC0zi64ryg/X8gs+AgavpT0OMpDJb150\nHwSFiO+bB8FiFAFyr0A2Vjm9mqgPRzp5w/pLWXPpDGreqAOEWiv85hv5Kg8lkmYV\nIGAqmwovMb0WmkSugDkMiTxeQ5lRvx6oXpJHFN9C+rvpejoLltBPoIAHzJbu2+TB\ny8+tl/TvI2ro9weuCfTbBftXH/6ShJrdqg6M6bjKaQKBgQDZpysYncaMVgoXp8yu\noyK5/TeWMvuYvqCm08QqtyPesgQvmJhOV/tmcwHkc491wwnHSeZpp63I7u8U6mOj\nAiA2C05Ddsd9qv8zbuSONnTR6W/obYTC2GG28LR/C8Y4Lr7eixr5HHmT2r+owEsH\nddxZZNykE9mxOSjmlbC0SxYxiQKBgQC1JJ3jC8niNs+nlyLLvvuehrVrIQ+W+U8T\nmpx+Hygvp0gBz7BGBnGMdc8F6l29S5g/nLaMe9+odRu90NpnWchOXF3bHj78G0SR\nDpVE+J0AhMqSVt1R45ossH/ye0BSuELL+nhpeAfPY1PIzA4PU/LsSXJefNi1t34x\nnOja3lmK1wKBgA0DD3KDTDFrm2Lap0PxgMv5tW8HUT9KdjRDCME8/an8nn9x8fkN\nDXyMd5p+xh7WMCl344yBd8RBdI2djaNbJy3T8zPZUAfVRzh98rAF1WoPOJ9+nKdB\nZGYZcdD+lTUaplKLomsuJp6OP1MJW/LwOuIlQ4OTpDoSHr3aSRweOQ9xAoGAWaOA\nGi3oPnBfPBC3YFnnDCCfQB9BJrXCovHcxTDH4yUFphfPpCdmI1rdEpFSx+zTr47u\nawCVwjgJfVoP6hrs25Irw9Xo1zrrKFkuFs5sayhLUjV4GiDmV30UI7tILmcObwBI\ne/Cw9LizamdIAd/KE5GY7hcb6nieExERzdVAPEsCgYBAfSVyhN1PLTNJZM+hhQac\nyAHXgCKQx7mp9ExEaTqz6DSVQqY2GcuT3HKAhnq8uwAoKoSvu2YdFYURrg5Qwixk\nOJfwD39F2gyAhpk2TmZ8nLNw6g+AN5l7te0J+2i+D2GmxFjniMxc7y65VrLLSD8V\noSeiK+aMB/2kQA1Qs7IOLQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "invoiceadmin1@invoice-project-319506.iam.gserviceaccount.com",
+  "client_id": "105790372490256251862",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/invoiceadmin1%40invoice-project-319506.iam.gserviceaccount.com"
+}
